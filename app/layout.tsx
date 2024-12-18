@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Urbanist, Roboto_Mono, } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar";
+import Header from "@/components/header";
 
 const urbanist = Urbanist({
   variable: "--font-urbanist-sans",
@@ -13,7 +15,7 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Monarca de las sombras",
+  title: "Portafolio de Ldsoto",
   description: "El mas fuerte",
 };
 
@@ -24,9 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${urbanist.variable} ${robotoMono.variable} antialiased`}
-      >
+      <body className={`${urbanist.variable} ${robotoMono.variable} antialiased`}>
+          <Navbar />
+          <Header/>
         {children}
       </body>
     </html>
