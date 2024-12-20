@@ -3,7 +3,7 @@ import { Urbanist, Roboto_Mono, } from "next/font/google";
 
 import 'swiper/css'
 import 'swiper/css/pagination'
-import 'swiper/css/scrolibar'
+import 'swiper/css/scrollbar'
 
 import "./globals.css";
 import Navbar from "@/components/navbar";
