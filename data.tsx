@@ -1,32 +1,33 @@
-import { BookText, CodeSquare, HomeIcon, UserRound, Linkedin, Twitter, Rss, Twitch, Youtube, Crop, Pencil, Computer, Book, Rocket, Speech } from "lucide-react";
+import { BookText, CodeSquare, HomeIcon, UserRound, Linkedin, Twitter, Facebook, Youtube, Pencil, Computer,  Speech, Instagram, Database, Code, BarChart  } from "lucide-react";
 
 export const socialNetworks = [
     {
         id: 1,
         logo: <Youtube size={30} strokeWidth={1} />,
-        src: "#!",
+        src: "https://www.youtube.com/@ls117spartan7",
     },
     {
         id: 2,
         logo: <Linkedin size={30} strokeWidth={1} />,
-        src: "#!",
+        src: "https://www.linkedin.com/in/luis-soto-7698262a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
         id: 3,
         logo: <Twitter size={30} strokeWidth={1} />,
-        src: "#!",
+        src: "https://x.com/Ldsoto117",
     },
     {
         id: 4,
-        logo: <Rss size={30} strokeWidth={1} />,
-        src: "#!",
+        logo: <Facebook size={30} strokeWidth={1} />,
+        src: "https://www.facebook.com/luisdavid.sotoestrada?mibextid=ZbWKwL",
     },
     {
         id: 5,
-        logo: <Twitch size={30} strokeWidth={1} />,
-        src: "#!",
+        logo: <Instagram size={30} strokeWidth={1} />,
+        src: "https://www.instagram.com/luis_soto_117/profilecard/?igsh=MXFwaGl2eHM5YTM1aw==",
     },
 ];
+
 
 
 export const itemsNavbar = [
@@ -65,113 +66,118 @@ export const itemsNavbar = [
 export const dataAboutPage = [
     {
         id: 1,
-        title: "Frontend Developer",
-        subtitle: "TechSolutions",
-        description: "Colabora con un equipo dinámico para desarrollar interfaces de usuario atractivas y funcionales que impulsen el éxito de nuestros clientes en el mundo digital.",
-        date: "Nov 2023 ",
+        title: "Sistemas de Información",
+        subtitle: "Gestión y Análisis de Datos",
+        description: "Estudia el diseño, implementación y gestión de sistemas de información para apoyar la toma de decisiones empresariales mediante el análisis eficiente de datos.",
+        date: "nov 2024",
     },
     {
         id: 2,
-        title: "Creador de Experiencias Digitales",
-        subtitle: "PixelCrafters",
-        description: "Trabaja en proyectos emocionantes que desafían los límites de la creatividad y la tecnología. Únete a nosotros mientras creamos experiencias digitales cautivadoras que inspiran y cautivan a nuestros usuarios.",
-        date: "May 2021",
+        title: "Software 2",
+        subtitle: "Diseño y Arquitectura de Software",
+        description: "Profundiza en técnicas avanzadas de desarrollo de software, incluyendo patrones de diseño, principios SOLID y arquitecturas modernas para construir sistemas robustos y escalables.",
+        date: "julio 2024",
     },
     {
         id: 3,
-        title: "Especialista en Desarrollo Frontend",
-        subtitle: "CodeForge Solutions",
-        description: "Como desarrollador frontend, tendrás la oportunidad de colaborar en proyectos diversos y desafiantes que te permitirán expandir tus habilidades y dejar tu huella en el mundo digital.",
-        date: "Ago 2019",
+        title: "Programación Web",
+        subtitle: "Desarrollo de Aplicaciones Web",
+        description: "Aprende a crear aplicaciones web dinámicas y responsivas utilizando tecnologías como HTML, CSS, JavaScript y frameworks modernos como React o Angular.",
+        date: "Nov 2022",
     },
     {
         id: 4,
-        title: "Prácticas Grado",
-        subtitle: "WebWizards Inc.",
-        description: "Únete a nosotros mientras creamos sitios web y aplicaciones interactivas que sorprenden y deleitan a nuestros clientes. Si tienes pasión por el diseño y la programación, y disfrutas colaborar en un entorno creativo, ¡queremos conocerte!        ",
-        date: "Mar 2018",
+        title: "Programación Móvil",
+        subtitle: "Desarrollo de Aplicaciones para Dispositivos Móviles",
+        description: "Explora el desarrollo de aplicaciones móviles nativas e híbridas utilizando tecnologías como Android Studio, Swift y Flutter, optimizando la experiencia del usuario en plataformas móviles.",
+        date: "nov 2022",
     },
+    
+    
 ]
 
 export const dataCounter = [
     {
         id: 0,
-        endCounter: 10,
-        text: "Años de experiencia",
+        endCounter: 4,
+        text: "Años dedicandome a esta carrera",
         lineRight: true,
         lineRightMobile: true,
     },
     {
         id: 1,
-        endCounter: 80,
+        endCounter: 10,
         text: "Clientes satisfechos",
         lineRight: true,
         lineRightMobile: false,
     },
     {
         id: 2,
-        endCounter: 220,
+        endCounter: 10,
         text: "Proyectos finalizados",
         lineRight: true,
         lineRightMobile: true,
     },
     {
         id: 3,
-        endCounter: 30,
-        text: "Premios ganadores",
+        endCounter: 5,
+        text: "aplicaciones vendidas",
         lineRight: false,
         lineRightMobile: false,
     },
 ];
 
 export const serviceData = [
+    
+    
     {
-        icon: <Crop />,
-        title: "Branding",
-        description: "Desarrollo de una identidad de marca sólida y coherente, incluyendo diseño de logotipo, colores y elementos visuales",
+        icon: <Computer />,
+        title: "Desarrollo web",
+        description: "Diseño y desarrollo aplicaciones que cumplan con los requisitos del usuario y seguridad",
     },
     {
         icon: <Pencil />,
         title: "Diseño web",
-        description: "Diseño creativo y profesional de interfaces web intuitivas y atractivas, centradas en la experiencia del usuario",
+        description: "Interfaces funcionales y atractivas centradas en la usabilidad.",
     },
     {
-        icon: <Computer />,
-        title: "Desarrollo web",
-        description: "Diseño y desarrollo de sitios web a medida, adaptados a tus necesidades",
+        icon: <Database />,
+        title: "Gestión de Información",
+        description: "Diseño y gestión de sistemas para optimizar decisiones.",
     },
     {
-        icon: <Book />,
-        title: "Copywriting",
-        description: "Creación de contenido persuasivo y atractivo que capta la atención de tu audiencia",
-    },
+        icon: <Code />,
+        title: "Desarrollo de Soluciones",
+        description: "Patrones, SOLID y estrategias para software escalable.",
+    },    
     {
-        icon: <Rocket />,
-        title: "SEO",
-        description: "Optimización de tu presencia en línea mediante estrategias de SEO avanzadas, ",
+        icon: <BarChart />,
+        title: "Modelo y Simulación",
+        description: "Estudia y aplica técnicas para representar y simular sistemas complejos en diversos dominios.",
     },
+    
 ];
 
 export const dataPortfolio = [
     {
         id: 1,
-        title: "Web Pro",
-        image: "/image-1.jpg",
-        urlGithub: "#!",
+        title: "Dashboard-unicesar",
+        image: "/Dashboard-1.jpg",
+        urlGithub: "https://github.com/shadow-shield/Dashboard-Admin.git",
         urlDemo: "#!",
     },
     {
         id: 2,
-        title: "Desarrollo Web Ágil",
-        image: "/image-2.jpg",
-        urlGithub: "#!",
-        urlDemo: "#!",
+        title: "administrar proyectos",
+        image: "/admiProyecto.jpg",
+        urlGithub: "https://github.com/luisDSotoE/admi-proyectos-cliente.git",
+        urlDemo: "https://admi-proyectos-cliente.vercel.app/",
     },
     {
         id: 3,
-        title: "Estrategias Web",
-        image: "/image-3.jpg",
-        urlGithub: "#!",
+        title: "Aplicacion pensionado",
+        image: "/pension.jpg",
+        urlGithub: "https://github.com/luisDSotoE/proyecto_pensionado.git",
         urlDemo: "#!",
     },
     {

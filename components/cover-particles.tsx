@@ -1,15 +1,14 @@
-"use client"; // Agrega esta línea al inicio del archivo
+"use client"; 
 
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim"; // Importa loadSlim
-
+import { loadSlim } from "@tsparticles/slim"; 
 const CoverParticles = () => {
     const [init, setInit] = useState(false);
     
     useEffect(() => {
         initParticlesEngine(async (engine) => {
-            await loadSlim(engine); // Carga slim particles
+            await loadSlim(engine); 
         }).then(() => {
             setInit(true);
         });

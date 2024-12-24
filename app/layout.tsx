@@ -20,8 +20,8 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portafolio de Ldsoto",
-  description: "El mas fuerte",
+  title: "Portafolio-Ldsoto",
+  description: "Aprender y mas",
 };
 
 export default function RootLayout({
