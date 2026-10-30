@@ -8,7 +8,7 @@ const FloatingWhatsapp = () => {
   const whatsappUrl = `https://wa.me/${PERSONAL_DATA.contact.whatsapp}?text=Hola%20${encodeURIComponent(PERSONAL_DATA.name)},%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar.`;
 
   return (
-    <div className="fixed bottom-8 right-8 z-50 flex items-center justify-center">
+    <div className="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-50 flex items-center justify-center">
       <Link
         href={whatsappUrl}
         target="_blank"
