@@ -23,11 +23,13 @@ import {
 
 export const PERSONAL_DATA = {
     name: "Luis Soto",
-    role: "Desarrollador Web & Ingeniero de Sistemas",
-    description: "Soy desarrollador web e ingeniero de sistemas especializado en crear soluciones digitales modernas, funcionales y escalables.",
+    // Un título más imponente que abarca software, hardware, 3D y consultoría
+    role: "Ingeniero de Sistemas & Arquitecto Tecnológico", 
+    // Descripción enfocada en el impacto y ecosistemas completos
+    description: "Transformo ideas en ecosistemas tecnológicos de alto nivel. Arquitecto y desarrollo plataformas robustas, seguras y con un diseño vanguardista que escalan junto a tus proyectos.",
     country: "Colombia",
     contact: {
-        whatsapp: "573000000000", // Reemplaza esto con tu número real, ej: 573101234567
+        whatsapp: "573000000000", // Reemplaza esto con tu número real
         email: "tu-correo@email.com",
     },
     social: {
@@ -132,7 +134,7 @@ export const dataAboutPage = [
 export const dataCounter = [
     {
         id: 0,
-        endCounter: 4,
+        endCounter: 2,
         text: "Años de experiencia",
         lineRight: true,
         lineRightMobile: true,
