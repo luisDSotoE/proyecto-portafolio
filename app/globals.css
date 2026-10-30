@@ -1,29 +1,71 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+:root {
+  /* Paleta Premium Dark Tech */
+  --background: #030014;
+  --foreground: #ffffff;
+}
 
 html,
 body {
-  /* height: 100%; */
-  color: #fff;
-  background: #1f1934;
+  color: var(--foreground);
+  background-color: var(--background);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+html {
+  scroll-behavior: smooth;
 }
 
-main {
-  background: #393a47;
-  height: 100vh;
-  height: 100dvh;
+/* Opcional: Personalizar el scrollbar para que luzca premium */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030014; 
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4; /* Cyan 500 */
 }
 
+/* 
+  Sobrescribiendo la paginación de Swiper
+  Cambiado a un tono naranja/cyan brillante para encajar con la estética neón/premium 
+*/
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets
-  .swiper-pagination-bullet {
-  background-color: #f5741c;
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: #06b6d4; /* O tu naranja original: #f5741c */
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet-active,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active {
+  background-color: #f5741c; /* Naranja para el activo, dando un contraste vibrante */
+  opacity: 1;
+  box-shadow: 0 0 10px rgba(245, 116, 28, 0.6);
+  transform: scale(1.2);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Utilidades Premium Añadidas */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-500;
+  }
+  
+  .glass-card {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl shadow-[0_4px_30px_rgba(0,0,0,0.1)];
+  }
+
+  .glass-card-hover {
+    @apply hover:bg-white/[0.05] hover:border-cyan-500/50 hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] transition-all duration-300;
   }
 }

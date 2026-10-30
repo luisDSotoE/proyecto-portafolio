@@ -1,33 +1,29 @@
-"use client"
+"use client";
 
 import { itemsNavbar } from "@/data";
-
-import { usePathname } from "next/navigation";
-
 import MotionTransition from "./transition-component";
-import Link from "next/link";
 
-
-const Navbar = () => {
-    const router = usePathname()
-    return (
-        <MotionTransition position="right" className="fixed z-40 flex flex-col items-center justify-center w-full mt-auto h-max bottom-10">
-            <nav>
-                <div className="flex items-center justify-center gap-2 ´x-4 py-1 rounded-full bg-white/15 background-blur-sm">
-                {itemsNavbar.map((item) => (
-                    <div key={item.id}
-                    className={
-                        `px-3 py-2 transition duration-150 rounded-full 
-                        cursor-pointer hover:bg-secondary
-                         ${router === item.link && 'bg-secondary' }`}
-                        >
-                        <Link href={item.link}>{item.icon}</Link>
-                    </div>
-                ))}
-                </div>
-            </nav>
-        </MotionTransition>
-    )
+export default function Navbar() {
+  return (
+    <MotionTransition position="right" className="fixed z-40 flex flex-col items-center justify-center w-full mt-auto h-max bottom-10">
+      <nav>
+        <div className="flex items-center justify-center gap-2 px-4 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
+          {itemsNavbar.map((item) => (
+            <a
+              key={item.id}
+              href={item.link}
+              className="p-2 transition-all duration-300 rounded-full hover:bg-cyan-500/20 hover:text-cyan-400 group relative"
+              aria-label={item.title}
+            >
+              {item.icon}
+              {/* Tooltip con nombre de sección */}
+              <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-1 text-xs rounded bg-[#030014] text-white opacity-0 group-hover:opacity-100 transition-opacity border border-white/10 whitespace-nowrap pointer-events-none">
+                {item.title}
+              </span>
+            </a>
+          ))}
+        </div>
+      </nav>
+    </MotionTransition>
+  );
 }
-
-export default Navbar;

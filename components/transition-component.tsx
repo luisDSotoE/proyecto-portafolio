@@ -1,28 +1,39 @@
-"use client"
+"use client";
 
-import { fadeIn } from "@/utils/motion-transitions";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import type { ReactNode } from "react";
 
-interface MotionTransitionProps {
-    children: React.ReactNode;
-    position: "right" | "bottom"
-    className?: string
-}
+type MotionTransitionProps = {
+    children: ReactNode;
+    position?: "left" | "right" | "top" | "bottom";
+    className?: string;
+};
 
-const MotionTransition = (props: MotionTransitionProps) => {
-    const {children, position, className} = props
+const positionVariants = {
+    left: { hidden: { opacity: 0, x: -40 }, visible: { opacity: 1, x: 0 } },
+    right: { hidden: { opacity: 0, x: 40 }, visible: { opacity: 1, x: 0 } },
+    top: { hidden: { opacity: 0, y: -30 }, visible: { opacity: 1, y: 0 } },
+    bottom: { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } },
+} as const;
+
+const MotionTransition = ({
+    children,
+    position = "right",
+    className = "",
+}: MotionTransitionProps) => {
+    const variants = positionVariants[position];
 
     return (
         <motion.div
-            variants={fadeIn(position)}
             initial="hidden"
             animate="visible"
-            exit="hidden"
+            variants={variants}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className={className}
         >
             {children}
         </motion.div>
     );
-}
+};
 
 export default MotionTransition;
